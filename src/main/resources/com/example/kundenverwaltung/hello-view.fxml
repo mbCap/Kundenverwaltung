@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox alignment="CENTER" prefHeight="552.0" prefWidth="642.0" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1"
+      xmlns="http://javafx.com/javafx/19" fx:controller="com.example.kundenverwaltung.KundenverwaltungController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+    <Label fx:id="positionLabel" text="0/0">
+        <VBox.margin>
+            <Insets left="10.0"/>
+        </VBox.margin>
+    </Label>
+    <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="600.0"/>
+    <VBox prefHeight="330.0" prefWidth="600.0">
+        <children>
+            <GridPane prefHeight="180.0" prefWidth="600.0">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="300.0"/>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="300.0"/>
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                </rowConstraints>
+                <padding>
+                    <Insets left="10.0" right="10.0"/>
+                </padding>
+                <children>
+                    <Label text="Kundennummer"/>
+                    <Label text="Kundenart" GridPane.rowIndex="1"/>
+                    <Label text="Name" GridPane.rowIndex="2"/>
+                    <Label text="Straße und Hausnummer" GridPane.rowIndex="3"/>
+                    <Label text="Plz" GridPane.rowIndex="4"/>
+                    <Label text="Ort" GridPane.rowIndex="5"/>
+                    <TextField fx:id="textField1" GridPane.columnIndex="1"/>
+                    <TextField fx:id="textField2" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                    <TextField fx:id="textField3" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+                    <TextField fx:id="textField4" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+                    <TextField fx:id="textField5" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+                    <ChoiceBox fx:id="checkBox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                </children>
+            </GridPane>
+        </children>
+    </VBox>
+    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="478.0" spacing="10.0">
+        <children>
+            <Button fx:id="vorherigerKunde" mnemonicParsing="false" text="vorheriger Kunde"/>
+            <Button fx:id="nächsterKunde" mnemonicParsing="false" text="nächster Kunde"/>
+            <Button fx:id="neuerKunde" mnemonicParsing="false" text="neuer Kunde"/>
+            <Button fx:id="kundeLöschen" mnemonicParsing="false" text="Kunde löschen"/>
+            <Button fx:id="ende" mnemonicParsing="false" text="Ende"/>
+        </children>
+    </HBox>
+
+    <Label fx:id="welcomeText"/>
+</VBox>
